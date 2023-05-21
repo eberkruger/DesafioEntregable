@@ -32,16 +32,14 @@ class ProductManager {
 
     try {
       await fs.promises.writeFile(this.path, JSON.stringify(this.products, null, 2), 'utf-8')
-      /* if (product.id) {
-        console.log('El producto ya fue agregado')
-      } */
-      return product.id
+      //return product.id
+      console.log('Producto agregado correctamente')
     } catch (err) {
       console.log('Error al agregar producto', err)
     }
   }
 
-  async getProduts() {
+  async getProducts() {
     try {
       const data = await fs.promises.readFile(this.path, 'utf-8')
       const dataParse = JSON.parse(data)
@@ -55,7 +53,7 @@ class ProductManager {
     }
   }
 
-  async getProdutsById(id) {
+  async getProductsById(id) {
     const data = await fs.promises.readFile(this.path, 'utf-8')
     const dataParse = JSON.parse(data)
     const product = dataParse.find((prod) => prod.id === id)
@@ -86,7 +84,7 @@ class ProductManager {
 
   async deleteAllProducts() {
     try {
-      await fs.promises.writeFile(this.path, 'utf-8')
+      await fs.promises.writeFile(this.path)
       console.log('Todos los productos han sido eliminados')
     } catch (err) {
       console.log('Error al eliminar todos los productos', err)
@@ -122,17 +120,17 @@ const productManager = new ProductManager('./test.json');
 productManager.addProduct('Celular', 'Smartphone Apple', 800, 'imagen1.jpg', 'P001', 20)
 productManager.addProduct('Televisor', 'Televisor Led LG 4K', 1200, 'imagen2.jpg', 'P002', 15)
 productManager.addProduct('Auricular', 'Ariculares inalámbricos', 500, 'imagen3.jpg', 'P003', 30)
-productManager.addProduct('Auricular', 'Ariculares inalámbricos', 500, 'imagen3.jpg', 'P003', 30)
+//productManager.addProduct('Auricular', 'Ariculares inalámbricos', 500, 'imagen3.jpg', 'P003', 30)
 productManager.addProduct('Compu', 'Ariculares inalámbricos', 500, 'imagen3.jpg', 'P004', 30)
 productManager.addProduct('Notebook', 'Ariculares inalámbricos', 500, 'imagen3.jpg', 'P005', 30)
 productManager.addProduct('Ipad', 'Ariculares inalámbricos', 700, 'imagen3.jpg', 'P006', 30)
-productManager.addProduct('Ipad', 'Ariculares inalámbricos', 700, 'imagen3.jpg', 'P006', 30)
+//productManager.addProduct('Ipad', 'Ariculares inalámbricos', 700, 'imagen3.jpg', 'P006', 30)
 
-//productManager.getProduts() // Muestra todos los productos existentes
+//productManager.getProducts() // Muestra todos los productos existentes
 
-//productManager.getProdutsById(2) // Muestra el producto con el id que pasamos
+//productManager.getProductsById(2) // Muestra el producto con el id que pasamos
 
-//productManager.deleteProduct(5) // Elimina el producto con id específico
+//productManager.deleteProduct(4) // Elimina el producto con id específico
 
 //productManager.deleteAllProducts() // Elimina todos los productos
 
