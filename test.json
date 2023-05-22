@@ -1,56 +1,38 @@
 [
   {
-    "id": 1,
     "title": "Celular",
     "description": "Smartphone Apple",
     "price": 800,
-    "thumbnail": "imagen1.jpg",
-    "code": "P001",
-    "stock": 20
+    "thumbnail": "Imagen1.jpg",
+    "code": "001",
+    "stock": 20,
+    "id": 1
   },
   {
-    "id": 2,
     "title": "Televisor",
     "description": "Televisor Led LG 4K",
     "price": 1200,
-    "thumbnail": "imagen2.jpg",
-    "code": "P002",
-    "stock": 15
+    "thumbnail": "Imagen2.jpg",
+    "code": "002",
+    "stock": 20,
+    "id": 2
   },
   {
-    "id": 3,
     "title": "Auricular",
     "description": "Ariculares inalámbricos",
     "price": 500,
-    "thumbnail": "imagen3.jpg",
-    "code": "P003",
-    "stock": 30
+    "thumbnail": "Imagen3.jpg",
+    "code": "003",
+    "stock": 20,
+    "id": 3
   },
   {
-    "id": 4,
-    "title": "Compu",
-    "description": "Ariculares inalámbricos",
-    "price": 500,
-    "thumbnail": "imagen3.jpg",
-    "code": "P004",
-    "stock": 30
-  },
-  {
-    "id": 5,
     "title": "Notebook",
-    "description": "Ariculares inalámbricos",
-    "price": 500,
-    "thumbnail": "imagen3.jpg",
-    "code": "P005",
-    "stock": 30
-  },
-  {
-    "id": 6,
-    "title": "Ipad",
-    "description": "Ariculares inalámbricos",
-    "price": 700,
-    "thumbnail": "imagen3.jpg",
-    "code": "P006",
-    "stock": 30
+    "description": "Computadora portátil",
+    "price": 1200,
+    "thumbnail": "Imagen2.jpg",
+    "code": "004",
+    "stock": 20,
+    "id": 4
   }
 ]
